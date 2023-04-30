@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    color: white;
+    cursor: pointer;
+    font-size: 2em;
+    user-select: none;
+    
+}
+
+.logo:hover{
+    color:rgb(239, 7, 19);
+    font-style: italic;
+}
+
+.navigation a{
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.login-btn{
+    height: 30px;
+    width: 60px;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: 2px solid;
+    outline: none;
+    background: transparent;
+    border-radius: 5px;
+    margin-left:20px ;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.login-btn:hover{
+    color: black;
+    background: white;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-image: url('./img/peaky.jpg');
+   background-size:cover;
+   background-position:center;
+}  
+
+.wrapper{
+    height: 450px;
+    width: 400px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 15px 10px 15px whitesmoke;
+}
+
+.form-box{
+    width:100%;
+    padding:40px; 
+}
+
+.form-box h1{
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
